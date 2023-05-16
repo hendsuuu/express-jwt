@@ -1,0 +1,54 @@
+GET http://localhost:5000/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJIZW5kcmEiLCJlbWFpbCI6IkhlbmRyYUBnbWFpbC5jb20iLCJpYXQiOjE2ODAxOTQ0MTcsImV4cCI6MTY4MDE5NDQzMn0.vKEuiW6XUnbwjRGGhxpcMK-jHk9SkdXG7JE1mfNfRUs
+###
+GET http://localhost:5000/users/1
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "saya",
+    "email" : "saya@gmail.com",
+    "gender" : "laki"
+}
+
+###
+PATCH  http://localhost:5000/users/7
+Content-Type: application/json
+
+{
+    "name" : "Hendra",
+    "email" : "Hendra@gmail.com",
+    "gender" : "laki"
+}
+
+###
+DELETE  http://localhost:5000/users/1
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Hendra",
+    "email" : "Hendraa@gmail.com",
+    "password" : "123456",
+    "confirmPassword" : "123456",
+    "gender" : "laki"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "Hendra@gmail.com",
+    "password" : "123456"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE  http://localhost:5000/logout
